@@ -16,3 +16,6 @@ elif score >= 60:
 else:
     grade = "E"
 st.write("Your grade is: ", grade)
+
+if st.button("點我"):
+    st.balloons()
