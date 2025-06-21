@@ -22,3 +22,10 @@ with st.expander("Class1 課堂筆記"):
         ---
         """
     )
+
+with st.expander("Class1 教學筆記"):
+    st.write(
+        """
+        ### Class1 教學筆記
+        """
+    )
