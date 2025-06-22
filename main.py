@@ -34,7 +34,7 @@ st.markdown(
 
 開啟終端機輸入:streamlit run main.py
 
-修改完提交與推送
+有Local URL跟全域網址，需要使用全域網址才可以分享，但可用Local URL來除錯
 
 """
 )
