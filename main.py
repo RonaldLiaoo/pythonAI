@@ -34,7 +34,7 @@ st.markdown(
 
 開啟終端機輸入:streamlit run main.py
 
-隨後保存即可自動更新
+修改完提交與推送
 
 """
 )
