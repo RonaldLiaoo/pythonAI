@@ -38,7 +38,10 @@ if prompt:
                     messages=st.session_state.messages,
                 )
                 reply = response.choices[0].message.content
-                st.markdown(reply)
+                try:
+                    st.markdown(reply)
+                except UnicodeEncodeError:
+                    st.text(reply)
                 st.session_state.messages.append(
                     {"role": "assistant", "content": reply}
                 )
