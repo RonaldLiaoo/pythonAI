@@ -1,6 +1,12 @@
 import streamlit as st
+import os
 
 st.title("PythonAI課程")
+
+folderPath = "markdown"
+files = os.listdir(folderPath)
+print(files)
+
 
 st.markdown(
     """

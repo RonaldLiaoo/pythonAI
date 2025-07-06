@@ -10,7 +10,6 @@ for i in range(1, number + 1):
     st.write(line)
 
 number2 = st.number_input("請輸入箭頭的層數", step=1, min_value=0, max_value=5)
-st.text("箭頭金字塔")
 
 pyramid = "箭頭金字塔：\n"
 
@@ -28,4 +27,4 @@ for i in range(1, number2 + 1):
     pyramid += "    *    \n"
 
 # 顯示整體，用 code block 包住，保留空格與格式
-st.markdown(f"```text\n{pyramid}```")
+st.write(f"```\n{pyramid}```")

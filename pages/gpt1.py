@@ -1,3 +1,5 @@
+# 終端機生程式AI
+
 import openai  # pip install openai
 from dotenv import load_dotenv
 import os
