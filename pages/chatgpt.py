@@ -12,7 +12,7 @@ col1, col2, col3 = st.columns([6, 2, 1])
 with col1:
     system_message = st.text_input("系統訊息", "請用繁體中文進行後續對話")
 with col2:
-    ai_model = st.selectbox("AI模型", ["gpt-4o-mini"])
+    ai_model = st.selectbox("AI模型", ["gpt-4o-mini", "gpt-4o"])
 with col3:
     if st.button("清除"):
         st.session_state.history = [{"role": "system", "content": system_message}]
