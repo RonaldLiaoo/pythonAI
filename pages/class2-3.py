@@ -12,13 +12,13 @@ number2 = st.number_input("請輸入箭頭的層數", step=1, min_value=0, max_v
 
 pyramid = "箭頭金字塔：\n"
 
-# 上半部金字塔
+# 上半部箭頭
 for i in range(1, number2 + 1):
     space = " " * (number2 - i)
     star = "*" * (2 * i - 1)
     pyramid += f"{space}{star}\n"
 
-# 下半部箭頭（固定格式）
+# 下半部箭頭
 for i in range(1, number2 + 1):
     space = " " * (number2 - 1)
     star = "*"

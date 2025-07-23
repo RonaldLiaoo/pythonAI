@@ -3,11 +3,6 @@ import os
 
 st.title("PythonAI課程")
 
-folderPath = "markdown"
-files = os.listdir(folderPath)
-print(files)
-
-
 st.markdown(
     """
 一、網站架設流程：
@@ -21,7 +16,9 @@ st.markdown(
 4. 上傳與更新網站
 """
 )
+
 st.write(" ")
+
 st.markdown(
     """
 二、如何更新網站：
@@ -44,5 +41,3 @@ st.markdown(
 
 """
 )
-
-print("Hello")
