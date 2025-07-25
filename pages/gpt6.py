@@ -1,5 +1,3 @@
-# 海龜湯遊戲 單題
-
 import streamlit as st
 import openai
 import json
