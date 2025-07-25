@@ -1,15 +1,27 @@
+# 海龜湯遊戲 多題
+
 import streamlit as st
 import openai
+import json
+import random
+
+with open("question/quizzess.json", "r", encoding="utf-8") as f:
+    quizzess = json.load(f)
+    if "pick" not in st.session_state:
+        st.session_state.pick = random.randrange(len(quizzess))
+    quiz = quizzess[st.session_state.pick]
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-col1, col2, col3 = st.columns([6, 2, 1])
+system_message = f"你是海龜湯主持人，我會詢問問題，你只能回答(是/否/無關)，直到我的回答答案相近時說回答正確並給我完整答案，題目是：{quiz['question']}，答案是：{quiz['answer']}。"
+
+st.title("海龜湯遊戲")
+
+col1, col2 = st.columns([6, 1])
 with col1:
-    system_message = st.text_input("系統訊息", "請用繁體中文進行後續對話")
+    st.write(f"題目：  \n {quiz['question']}")
 with col2:
-    ai_model = st.selectbox("AI模型", ["gpt-4o-mini", "gpt-4o"])
-with col3:
-    if st.button("清除"):
+    if st.button("🗑️"):
         st.session_state.history = [{"role": "system", "content": system_message}]
         st.rerun()
 
@@ -23,7 +35,7 @@ if prompt:
     st.session_state.history.append({"role": "user", "content": prompt})
 
     response = openai.chat.completions.create(
-        model=ai_model,
+        model="gpt-4o",
         messages=st.session_state.history,
     )
 
