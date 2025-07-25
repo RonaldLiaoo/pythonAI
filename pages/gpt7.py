@@ -11,7 +11,7 @@ with open("question/quizzess.json", "r", encoding="utf-8") as f:
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-system_message = f"你是海龜湯主持人，我會詢問問題，根據我的問題，依正確答案回答(是/否/無關)，直到我的回答與答案相近時說回答正確並給我完整答案，題目是：{quiz['question']}，答案是：{quiz['answer']}。"
+system_message = f"你是海龜湯主持人，我會詢問問題或回答，根據我的問題，依正確答案回答(是/否/無關)，直到我的回答與正確答案相近時說回答正確並給我完整答案，題目是：{quiz['question']}，正確答案是：{quiz['answer']}。"
 
 st.title("海龜湯遊戲")
 
