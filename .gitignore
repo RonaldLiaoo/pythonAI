@@ -26,3 +26,9 @@ ehthumbs.db
 # Ignore environment files
 .streamlit/secrets.toml
 *.env
+
+markdown/teach1.md
+markdown/teach2.md
+markdown/teach3.md
+markdown/teach4.md
+markdown/teach5.md
